@@ -9,7 +9,7 @@ check your nodejs version
 How to run ?
 ------
 - `git clone https://github.com/arifistifik/botkick.git`
-- `cd LineAlphatJS && npm install`
+- `cd botkick && npm install`
 - `npm start`
 
 
