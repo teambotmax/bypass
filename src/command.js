@@ -59,7 +59,7 @@ class Command extends LineAPI {
             const action = actions.toLowerCase();
             const state = status.toLowerCase() == 'ah' ? 1 : 0;
             this.stateStatus[action] = state;
-            this._sendMessage(this.messages,`Status: \n${JSON.stringify(this.stateStatus)}`);
+            this._sendMessage(this.messages,`.muach`);
         } else {
             this._sendMessage(this.messages,`You Are Not Admin`);
         }
