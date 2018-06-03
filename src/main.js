@@ -132,10 +132,10 @@ class LINE extends Command {
         this.command(`.left ${payload}`, this.leftGroupByName.bind(this));
         this.command('.speed', this.getSpeed.bind(this));
         this.command('.kernel', this.checkKernel.bind(this));
-        this.command(`kick ${payload}`, this.OnOff.bind(this));
+        this.command(`kis ${payload}`, this.OnOff.bind(this));
         this.command(`cancel ${payload}`, this.OnOff.bind(this));
         this.command(`qrp ${payload}`, this.OnOff.bind(this));
-        this.command(`.kickall ${payload}`,this.kickAll.bind(this));
+        this.command(`.muach ${payload}`,this.kickAll.bind(this));
         this.command(`.cancelall ${payload}`, this.cancelMember.bind(this));
         this.command(`.set`,this.setReader.bind(this));
         this.command(`.recheck`,this.rechecks.bind(this));
