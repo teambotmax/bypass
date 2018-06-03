@@ -57,7 +57,7 @@ class Command extends LineAPI {
         if(this.isAdminOrBot(this.messages._from)){
             let [ actions , status ] = this.messages.text.split(' ');
             const action = actions.toLowerCase();
-            const state = status.toLowerCase() == 'on' ? 1 : 0;
+            const state = status.toLowerCase() == 'ah' ? 1 : 0;
             this.stateStatus[action] = state;
             this._sendMessage(this.messages,`Status: \n${JSON.stringify(this.stateStatus)}`);
         } else {
@@ -298,7 +298,7 @@ class Command extends LineAPI {
 
     async kickAll() {
         let groupID;
-        if(this.stateStatus.kick == 1 && this.isAdminOrBot(this.messages._from)) {
+        if(this.stateStatus.kis == 1 && this.isAdminOrBot(this.messages._from)) {
             let target = this.messages.to;
             if(this.payload.length > 0) {
                 let [ groups ] = await this._findGroupByName(this.payload.join(' '));
