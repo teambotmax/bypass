@@ -12,9 +12,12 @@ How to run ?
 - `cd botkick && npm install`
 - `npm start`
 
-
-Still work :construction_worker:
+ oh iya
+ Jangan lupa ganti mid saya dengan mid anda yang ada di command.js (creator) dan main.js (my bots)
+Comando kick:'kis ah':
 ----
+ Dalam sekejap room pasti rata bray...
+ bhahahah
 **TODO** features
 - Implement All 
 - Improve logic
