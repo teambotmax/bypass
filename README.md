@@ -8,8 +8,9 @@ check your nodejs version
 
 How to run ?
 ------
-- `git clone https://github.com/arifistifik/botkick.git`
+- `git clone https://github.com/arifistifik/botkis.git`
 - `cd botkick && npm install`
+- ‘cd src’
 - `npm start`
 
  oh iya
