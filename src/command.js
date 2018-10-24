@@ -166,8 +166,8 @@ class Command extends LineAPI {
             contentType: 13,
             contentPreview: null,
             contentMetadata: 
-            { mid: 'ub8a07a67c06f966ce24bb0a023edc634',
-            displayName: '莫言' }
+            { mid: 'ufe1707ae9b2ff7ab61505795b7995440',
+            displayName: '􀰂􀰂尹莫􏿿👉此人沉默👈傑少管嚴' }
         }
         Object.assign(this.messages,msg);
         this._sendMessage(this.messages);
