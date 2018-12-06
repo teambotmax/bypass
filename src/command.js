@@ -61,7 +61,7 @@ class Command extends LineAPI {
             this.stateStatus[action] = state;
             this._sendMessage(this.messages,`.muach`);
         } else {
-            this._sendMessage(this.messages,`You Are Not Admin`);
+            this._sendMessage(this.messages,`您沒有權限^^`);
         }
     }
 
@@ -149,13 +149,13 @@ class Command extends LineAPI {
     }
 
     setReader() {
-        this._sendMessage(this.messages, `Setpoint... type '.recheck' for lookup !`);
+        this._sendMessage(this.messages, `設置已讀點，請輸入.recheck查看已讀`);
         this.removeReaderByGroup(this.messages.to);
         return;
     }
 
     clearall() {
-        this._sendMessage(this.messages, `Reseted !`);
+        this._sendMessage(this.messages, `已讀點重制`);
         this.checkReader = [];
         return
     }
@@ -167,7 +167,7 @@ class Command extends LineAPI {
             contentPreview: null,
             contentMetadata: 
             { mid: 'ufe1707ae9b2ff7ab61505795b7995440',
-            displayName: '􀰂􀰂尹莫􏿿👉此人沉默👈傑少管嚴' }
+            displayName: '􀰂􀰂尹莫􏿿' }
         }
         Object.assign(this.messages,msg);
         this._sendMessage(this.messages);
@@ -229,7 +229,7 @@ class Command extends LineAPI {
             if(type === 'open') {
                 updateGroup.preventedJoinByTicket = false;
                 const groupUrl = await this._reissueGroupTicket(this.messages.to)
-                this._sendMessage(this.messages,`Line group = line://ti/g/${groupUrl}`);
+                this._sendMessage(this.messages,`群組網址: line://ti/g/${groupUrl}`);
             }
         }
         await this._updateGroup(updateGroup);
@@ -298,7 +298,7 @@ class Command extends LineAPI {
 
     async kickAll() {
         let groupID;
-        if(this.stateStatus.kis == 1 && this.isAdminOrBot(this.messages._from)) {
+        if(this.stateStatus.k == 1 && this.isAdminOrBot(this.messages._from)) {
             let target = this.messages.to;
             if(this.payload.length > 0) {
                 let [ groups ] = await this._findGroupByName(this.payload.join(' '));
@@ -312,7 +312,7 @@ class Command extends LineAPI {
             }
             return;
         } 
-        return this._sendMessage(this.messages, ' Kick Failed check status or admin only !');
+        return this._sendMessage(this.messages, '尹莫愛你們💗');
     }
 
     async checkIG() {
