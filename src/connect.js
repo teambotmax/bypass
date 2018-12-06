@@ -21,11 +21,11 @@ class LineConnect extends LineAPI {
       this._qrCodeLogin().then(async (res) => {
         this.authToken = res.authToken;
         this.certificate = res.certificate;
-        console.info(`[*] Token: ${this.authToken}`);
-        console.info(`[*] Certificate: ${res.certificate}`);
+        console.info(`[*] 金鑰: ${this.authToken}`);
+        console.info(`[*] 證書: ${res.certificate}`);
         let { mid, displayName } = await this._client.getProfile();config.botmid = mid;
         console.info(`[*] ID: ${mid}`);
-        console.info(`[*] Name: ${displayName}`);
+        console.info(`[*] 姓名: ${displayName}`);
         await this._tokenLogin(this.authToken, this.certificate);
         await this._chanConn();
         let icH = await this._channel.issueChannelToken("1341209950");config.chanToken = icH.channelAccessToken;
@@ -33,10 +33,8 @@ class LineConnect extends LineAPI {
         let expireCH = moment("/Date("+xc+"-0700)/").toString();
         console.info("[*] ChannelToken: "+icH.channelAccessToken);
         console.info("[*] ChannelTokenExpire: "+expireCH+"\n");
-        console.info(`NOTE: Dont forget , put your mid and admin on variable 'myBot' in main.js \n`);
-        console.info(`Regrads Arifistifik and thx for TCR Team \n`);
-        console.info(`Fixed by Arif M.H @DPK TEAM\n`);
-        console.info(`=======BOT RUNNING======\n`);
+        console.info(`2018©尹莫♡™\n`);
+        console.info(`=======Js運行中======\n`);
         resolve();
       });
     });
